@@ -53,14 +53,12 @@ def findMatchPlay(team):
                 'active': tPeriod['active'],
                 'status': status, 'matches': i})
             i = 0
-    return(compList)
 
 def timeStamp():
     #Loop through compList[] and change the UNIX timestamp to a human
     # readable timestamp.
     for newTimestamp in compList:
         newTimestamp['Date Joined'] = dt.fromtimestamp(newTimestamp['Date Joined'])
-    return(compList)
 
 def writeToCSV():
     #write the contense of compList[] to a csv file.       
